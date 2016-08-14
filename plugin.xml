@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-read-sms"
+        version="1.0.5">
+
+    <name>SMS</name>
+    <description>Cordova plugin to read SMS for Android 6</description>
+    <author>Vladyslav S.</author>
+    <license>MIT</license>
+    <keywords>cordova,sms</keywords>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+
+    <js-module src="www/read-sms.js" name="ReadSMS">
+        <clobbers target="ReadSMS"/>
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ReadSMS">
+                <param name="android-package" value="com.schermannj.cordova.plugin.ReadSMSPlugin"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission-sdk-23 android:name="android.permission.READ_SMS"/>
+            <uses-permission android:name="android.permission.READ_SMS"/>
+        </config-file>
+
+        <source-file src="src/android/ReadSMSPlugin.java" target-dir="src/com/schermannj/cordova/plugin"/>
+    </platform>
+
+</plugin>

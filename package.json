@@ -1,0 +1,28 @@
+{
+  "name": "cordova-plugin-read-sms",
+  "version": "1.0.0",
+  "description": "Cordova plugin to read SMS for Android 6",
+  "cordova": {
+    "id": "cordova-plugin-read-sms",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/schermannj/cordova-plugin-read-sms.git"
+  },
+  "bugs": {
+    "url": "https://github.com/schermannj/cordova-plugin-read-sms/issues"
+  },
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "sms"
+  ],
+  "author": {
+    "name": "Vladyslav S.",
+    "email": "schermannj23@gmail.com"
+  },
+  "license": "MIT"
+}
